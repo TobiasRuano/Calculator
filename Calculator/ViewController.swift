@@ -9,8 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet var myGradientView: GradientView!
     var currentNumber = ""
-    var displayNumber = ""
     var previousNumber = 0
     var performingMath = false
     var operation = 0
@@ -34,7 +34,6 @@ class ViewController: UIViewController {
             previousNumber = Int(screenLabel.text!)!
             
             if sender.tag == 11 {
-                displayNumber = currentNumber + "+"
                 
             }else if sender.tag == 12 {
                 
@@ -73,9 +72,27 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func settingsButton(_ sender: UIButton) {
+        performSegue(withIdentifier: "segue", sender: self)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if UserDefaults.standard.value(forKey: "StartColor") != nil {
+            let startColor = UserDefaults.standard.colorForKey(key: "StartColor")
+            let endColor = UserDefaults.standard.colorForKey(key: "EndColor")
+            myGradientView.StartColor = startColor!
+            myGradientView.EndColor = endColor!
+        }
+        else {
+            myGradientView.StartColor = UIColor(displayP3Red: 48/255, green: 35/255, blue: 174/255, alpha: 1.0)
+            myGradientView.EndColor = UIColor(displayP3Red: 200/255, green: 109/255, blue: 215/255, alpha: 1.0)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -84,5 +101,24 @@ class ViewController: UIViewController {
     }
 
 
+}
+
+extension UserDefaults {
+    func colorForKey(key: String) -> UIColor? {
+        var color: UIColor?
+        if let colorData = data(forKey: key) {
+            color = NSKeyedUnarchiver.unarchiveObject(with: colorData) as? UIColor
+        }
+        return color
+    }
+    
+    func setColor(color: UIColor?, forKey key: String) {
+        var colorData: NSData?
+        if let color = color {
+            colorData = NSKeyedArchiver.archivedData(withRootObject: color) as NSData?
+        }
+        set(colorData, forKey: key)
+    }
+    
 }
 
