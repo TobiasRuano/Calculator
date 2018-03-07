@@ -6,6 +6,8 @@
 //  Copyright © 2018 Tobias Ruano. All rights reserved.
 //
 
+//TODO: Solo se pueden mostrar 8 cifras
+
 import UIKit
 
 class ViewController: UIViewController {
@@ -64,7 +66,7 @@ class ViewController: UIViewController {
                 
             }
         }else if sender.tag == 17 {
-            screenLabel.text = ""
+            screenLabel.text = "0"
             currentNumber = ""
             previousNumber = 0
             operation = 0
@@ -79,10 +81,15 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        screenLabel.text = "0"
         // Do any additional setup after loading the view, typically from a nib.
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        changeBackground()
+    }
+    
+    func changeBackground() {
         if UserDefaults.standard.value(forKey: "StartColor") != nil {
             let startColor = UserDefaults.standard.colorForKey(key: "StartColor")
             let endColor = UserDefaults.standard.colorForKey(key: "EndColor")

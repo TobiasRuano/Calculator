@@ -36,8 +36,8 @@ class SettingsViewController: UIViewController {
             changeColors(color1: startColor, color2: endColor)
         }else if sender.tag == 14 {
             //change
-            startColor = UIColor(displayP3Red: 250/255, green: 217/255, blue: 97/255, alpha: 1.0)
-            endColor = UIColor(displayP3Red: 247/255, green: 107/255, blue: 28/255, alpha: 1.0)
+            startColor = UIColor(displayP3Red: 48/255, green: 35/255, blue: 174/255, alpha: 1.0)
+            endColor = UIColor(displayP3Red: 81/255, green: 207/255, blue: 236/255, alpha: 1.0)
             changeColors(color1: startColor, color2: endColor)
         }
     }
@@ -55,6 +55,18 @@ class SettingsViewController: UIViewController {
     func changeColors(color1: UIColor, color2: UIColor) {
         UserDefaults.standard.setColor(color: color1, forKey: "StartColor")
         UserDefaults.standard.setColor(color: color2, forKey: "EndColor")
+        
+        createAlert(tittle: "Theme Changed!", message: "")
+    }
+    
+    func createAlert(tittle: String, message: String){
+        
+        let alert = UIAlertController(title: tittle, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { (action) in alert.dismiss(animated: true, completion: nil)
+        }))
+        
+        self.present(alert, animated:  true, completion: nil)
     }
     
 

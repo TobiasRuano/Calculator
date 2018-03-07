@@ -32,13 +32,6 @@
                                 <color key="textColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZUO-bL-tra">
-                                <rect key="frame" x="16" y="98" width="343" height="77"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="64"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tVy-F8-97Q">
                                 <rect key="frame" x="94" y="480" width="93" height="93"/>
                                 <state key="normal" image="two"/>
@@ -177,6 +170,13 @@
                                     <segue destination="iTX-JN-WKL" kind="show" identifier="segue" id="luW-qT-UdO"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZUO-bL-tra">
+                                <rect key="frame" x="16" y="105" width="343" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -287,7 +287,7 @@
                             </button>
                             <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ElK-PD-Zf0">
                                 <rect key="frame" x="18" y="470" width="339" height="57"/>
-                                <state key="normal" image="multicolor"/>
+                                <state key="normal" image="blue"/>
                                 <connections>
                                     <action selector="backgroundColorSelection:" destination="iTX-JN-WKL" eventType="touchUpInside" id="Ao5-Ry-qS5"/>
                                 </connections>
@@ -341,12 +341,12 @@
         <image name="AC" width="93" height="93"/>
         <image name="Combined Shape" width="33" height="33"/>
         <image name="Shape" width="41" height="33"/>
+        <image name="blue" width="339" height="57"/>
         <image name="divide" width="93" height="93"/>
         <image name="eight" width="93" height="93"/>
         <image name="five" width="93" height="93"/>
         <image name="four" width="93" height="93"/>
         <image name="green" width="339" height="57"/>
-        <image name="multicolor" width="339" height="57"/>
         <image name="nine" width="93" height="93"/>
         <image name="one" width="93" height="93"/>
         <image name="orange" width="339" height="57"/>
