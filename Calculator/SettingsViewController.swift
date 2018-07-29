@@ -41,6 +41,7 @@ class SettingsViewController: UIViewController {
             changeColors(color1: startColor, color2: endColor)
         }
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
