@@ -20,6 +20,16 @@ class ViewController: UIViewController {
     @IBOutlet weak var screenLabel: UILabel!
     @IBOutlet weak var operationDisplay: UILabel!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        screenLabel.text = "0"
+        // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        changeBackground()
+    }
+    
     @IBAction func numbers(_ sender: UIButton) {
         if performingMath == true {
             screenLabel.text = String(sender.tag)
@@ -30,6 +40,7 @@ class ViewController: UIViewController {
             screenLabel.text = currentNumber
         }
     }
+    
     @IBAction func buttons(_ sender: UIButton) {
         if screenLabel.text != "" && sender.tag != 10 && sender.tag != 16 && sender.tag != 17 {
             
@@ -78,17 +89,6 @@ class ViewController: UIViewController {
         performSegue(withIdentifier: "segue", sender: self)
     }
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        screenLabel.text = "0"
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        changeBackground()
-    }
-    
     func changeBackground() {
         if UserDefaults.standard.value(forKey: "StartColor") != nil {
             let startColor = UserDefaults.standard.colorForKey(key: "StartColor")
@@ -101,13 +101,6 @@ class ViewController: UIViewController {
             myGradientView.EndColor = UIColor(displayP3Red: 200/255, green: 109/255, blue: 215/255, alpha: 1.0)
         }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 
 extension UserDefaults {

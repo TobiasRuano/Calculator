@@ -8,8 +8,6 @@
 
 import UIKit
 
-@IBDesignable
-
 class GradientView: UIView {
     
     @IBInspectable var StartColor: UIColor = UIColor.clear {

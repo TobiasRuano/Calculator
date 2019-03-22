@@ -14,6 +14,7 @@
 		8B599E0D204DCCD10057FB6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B599E0B204DCCD10057FB6D /* LaunchScreen.storyboard */; };
 		8B599E15204F06D80057FB6D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B599E14204F06D80057FB6D /* SettingsViewController.swift */; };
 		8B599E17204F085A0057FB6D /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B599E16204F085A0057FB6D /* GradientView.swift */; };
+		8B65C1782244377C006F5D8B /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B65C1772244377C006F5D8B /* CustomButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		8B599E0E204DCCD10057FB6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B599E14204F06D80057FB6D /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		8B599E16204F085A0057FB6D /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		8B65C1772244377C006F5D8B /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				8B599E04204DCCD10057FB6D /* ViewController.swift */,
 				8B599E14204F06D80057FB6D /* SettingsViewController.swift */,
 				8B599E16204F085A0057FB6D /* GradientView.swift */,
+				8B65C1772244377C006F5D8B /* CustomButton.swift */,
 				8B599E06204DCCD10057FB6D /* Main.storyboard */,
 				8B599E09204DCCD10057FB6D /* Assets.xcassets */,
 				8B599E0B204DCCD10057FB6D /* LaunchScreen.storyboard */,
@@ -146,6 +149,7 @@
 				8B599E03204DCCD10057FB6D /* AppDelegate.swift in Sources */,
 				8B599E17204F085A0057FB6D /* GradientView.swift in Sources */,
 				8B599E15204F06D80057FB6D /* SettingsViewController.swift in Sources */,
+				8B65C1782244377C006F5D8B /* CustomButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
